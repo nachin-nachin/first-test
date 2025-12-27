@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letrero QR - Boda</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 0;
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: white;
+        }
+        
+        .container {
+            width: 21cm;
+            height: 29.7cm;
+            padding: 2cm;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #ffeef8 0%, #fff5f7 100%);
+        }
+        
+        .card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 500px;
+        }
+        
+        .title {
+            font-size: 48px;
+            margin-bottom: 10px;
+            color: #d946ef;
+        }
+        
+        .subtitle {
+            font-size: 32px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 30px;
+        }
+        
+        .section-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #d946ef;
+            margin: 30px 0 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .qr-placeholder {
+            width: 300px;
+            height: 300px;
+            border: 3px dashed #d946ef;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px auto;
+            background: #fef3ff;
+            font-size: 18px;
+            color: #d946ef;
+            font-weight: bold;
+        }
+        
+        .instructions {
+            text-align: left;
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        
+        .instructions ol {
+            margin: 10px 0;
+            padding-left: 25px;
+        }
+        
+        .instructions li {
+            font-size: 18px;
+            margin: 10px 0;
+            color: #555;
+        }
+        
+        .pin-box {
+            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            margin-top: 20px;
+        }
+        
+        .pin-label {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .pin-number {
+            font-size: 48px;
+            font-weight: bold;
+            letter-spacing: 10px;
+        }
+        
+        .footer {
+            margin-top: 30px;
+            font-size: 14px;
+            color: #999;
+        }
+        
+        @media print {
+            body {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="title">💒</div>
+            <div class="subtitle">Bienvenidos a nuestra Boda</div>
+            
+            <div class="section-title">
+                <span>📱</span>
+                <span>ENCUENTRA TU MESA</span>
+            </div>
+            
+            <div class="qr-placeholder">
+                PEGA TU CÓDIGO QR AQUÍ
+                <br>
+                (15cm x 15cm)
+            </div>
+            
+            <div class="instructions">
+                <strong style="font-size: 18px; color: #333;">Instrucciones:</strong>
+                <ol>
+                    <li>Escanea el código con tu celular</li>
+                    <li>Escribe tu nombre completo</li>
+                    <li>Verás tu mesa y asiento asignado</li>
+                    <li>Confirma tu llegada con el PIN</li>
+                </ol>
+            </div>
+            
+            <div class="pin-box">
+                <div class="pin-label">🔐 PIN para confirmar llegada:</div>
+                <div class="pin-number">1234</div>
+            </div>
+            
+            <div class="footer">
+                ¿Necesitas ayuda? Consulta en recepción
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Auto-print cuando se abre
+        // window.onload = function() {
+        //     window.print();
+        // }
+    </script>
+</body>
+</html>
